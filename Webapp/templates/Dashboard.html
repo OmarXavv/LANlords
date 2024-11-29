@@ -3,9 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>House Dashboard</title>
+    <link rel="stylesheet" href="../static/Dashboard.css">
 </head>
 <body>
-    
+    <div class="dashboard-container">
+        <!-- Side Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Image of house HERE</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#overview" class="active">Dashboard</a></li>
+                <li><a href="#properties">My Property</a></li>
+                <li><a href="#applications">Entertainment</a></li>
+                <li><a href="#garbage">Garbage</a></li>
+                <li><a href="#settings">Settings</a></li>
+                <li><a href="#landing-page" class="go-back">Go back</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <h1>Dashboard.</h1>
+                <h1 class="time"> {{time}} </h1>
+                <p>Live overview</p>
+                
+            </header>
+            <section class="stats-overview">
+                <div class="stat-card">
+                    <h3>House Temperature</h3>
+                    <p>24°C(needs to be live)</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Lights Active (live if possible)</h3>
+                    <p>12/20</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Energy Usage (also live)</h3>
+                    <p>75 kWh</p>
+                </div>
+            </section>
+
+            <section class="charts">
+                <div class="chart">
+                    <h3>Daily Energy Consumption (saves the last 7 days)</h3>
+                    <p> Day 1: # </p>
+                    <p> Day 2: # </p>
+                    <p> Day 3: # </p>
+                    <p> Day 4: # </p>
+                    <p> Day 5: # </p>
+                    <p> Day 6: # </p>
+                    <p> Day 7: # </p>
+                </div>
+                <div class="chart">
+                    <h3>Another info</h3>
+                    <img src="device-usage-placeholder.png" alt="Device usage chart">
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
