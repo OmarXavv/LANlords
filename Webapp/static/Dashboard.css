@@ -19,6 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 20px;
+
 }
 
 .sidebar-header {
@@ -26,9 +27,10 @@ body {
     margin-bottom: 30px;
     font-size: 1.5rem;
     font-weight: bold;
+    height: 15%
 }
 
-.nav-links {
+.nav-links {    
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -52,15 +54,10 @@ body {
     background-color: #575757;
 }
 
-.logout {
-    margin-top: auto;
-    color: #ff4d4d;
-}
-
 /* Main Content */
 .main-content {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../Images/Backround-img.jpg') no-repeat center center/cover;
     flex: 1;
-    background-color: #f4f4f4;
     padding: 20px;
     overflow-y: auto;
 }
@@ -86,7 +83,7 @@ body {
 
 .stat-card {
     flex: 1;
-    background-color: #fff;
+    background-color:  rgba(255, 255, 255, 0.95);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -105,7 +102,7 @@ body {
 
 .chart {
     flex: 1;
-    background-color: #fff;
+    background-color:  rgba(255, 255, 255, 0.95);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -115,4 +112,8 @@ body {
 .chart img {
     max-width: 100%;
     border-radius: 5px;
+}
+
+.Side-img {
+    height: 90%;
 }
