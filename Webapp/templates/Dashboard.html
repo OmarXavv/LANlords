@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>House Dashboard</title>
-    <link rel="stylesheet" href="../static/Dashboard.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Dashboard.css') }}">
+    <meta http-equiv="refresh" content="1">
 </head>
 <body>
     <div class="dashboard-container">
         <!-- Side Navigation -->
         <aside class="sidebar">
             <div class="sidebar-header">
-                <img class="Side-img"src="../Images/House.png" alt="House Image" />
+                <img class="Side-img" src="{{ url_for('static', filename='House.png') }}" alt="House Image">
             </div>
             <ul class="nav-links">
-                <li><a href="Dashboard.html" class="active">Dashboard</a></li>
-                <li><a href="Entertainment.html">Entertainment</a></li>
-                <li><a href="Trash.html">Garbage</a></li>
-                <li><a href="Home.html" class="go-back">Go back</a></li>
+                <li><a href="{{ url_for('dashboard') }}" class="active">Dashboard</a></li>
+                <li><a href="{{ url_for('entertainment') }}">Entertainment</a></li>
+                <li><a href="{{ url_for('trash') }}">Garbage</a></li>
+                <li><a href="{{ url_for('home') }}" class="go-back">Go back</a></li>                
             </ul>
         </aside>
 
@@ -25,22 +26,22 @@
         <main class="main-content">
             <header class="header">
                 <h1>Dashboard.</h1>
-                <h1 class="time"> {{time}} </h1>
+                <h1 class="time">{{ time }}</h1>
                 <p>Live overview</p>
-                
             </header>
+            
             <section class="stats-overview">
                 <div class="stat-card">
                     <h3>House Temperature</h3>
-                    <p>24°C(needs to be live)</p>
+                    <p>{{ temperature }}</p>
                 </div>
                 <div class="stat-card">
-                    <h3>Lights Active (live if possible)</h3>
-                    <p>12/20</p>
+                    <h3>Lights Active</h3>
+                    <p>{{ lights_active }}</p>
                 </div>
                 <div class="stat-card">
-                    <h3>Energy Usage (also live)</h3>
-                    <p>75 kWh</p>
+                    <h3>Energy Usage</h3>
+                    <p>{{ energy_usage }}</p>
                 </div>
             </section>
 

@@ -56,7 +56,7 @@ body {
 
 /* Main Content */
 .main-content {
-    background:  url('../Images/Backround-img.jpg') no-repeat center center/cover;
+    background:  url('../static/Backround-img.jpg') no-repeat center center/cover;
     flex: 1;
     padding: 20px;
     overflow-y: auto;

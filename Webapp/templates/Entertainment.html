@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>House Dashboard</title>
-    <link rel="stylesheet" href="../static/Dashboard.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Dashboard.css') }}">
+    <meta http-equiv="refresh" content="1">
 </head>
 <body>
     <div class="dashboard-container">
         <!-- Side Navigation -->
         <aside class="sidebar">
             <div class="sidebar-header">
-                <img class="Side-img"src="../Images/Entertainment.png" alt="House Image" />
+                <img class="Side-img" src="{{ url_for('static', filename='Entertainment.png') }}" alt="House Image" />
+
             </div>
             <ul class="nav-links">
-                <li><a href="Dashboard.html">Dashboard</a></li>
-                <li><a href="Entertainment.html"  class="active">Entertainment</a></li>
-                <li><a href="Trash.html">Garbage</a></li>
-                <li><a href="Home.html" class="go-back">Go back</a></li>
+                <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                <li><a href="{{ url_for('entertainment') }}" class="active">Entertainment</a></li>
+                <li><a href="{{ url_for('trash') }}">Garbage</a></li>
+                <li><a href="{{ url_for('home') }}" class="go-back">Go back</a></li>                
             </ul>
         </aside>
 

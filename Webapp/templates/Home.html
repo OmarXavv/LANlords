@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apartment Homepage</title>
-    <link rel="stylesheet" href="../static/stylesheet.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
 </head>
 <body>
     <header class="hero-section">
         <nav class="top-nav">
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="#why">Why?</a></li>
                 <li><a href="#who">Extras</a></li>
                 <li><a href="#Contacts">Contacts</a></li>
             </ul>
         </nav>
         <div class="hero-content">
-            <h1>Welcome to our Apartment.</h1><a href="dashboard.html">
-                <button class="Dashboard-button"> Dashboard </button>
+            <h1>Welcome to our Apartment.</h1>
+            <a href="{{ url_for('dashboard') }}" class="Dashboard-button">Go to Dashboard</a>
             </a>
         </div>
     </header>
@@ -67,14 +67,8 @@
     <footer id="Contacts">
         <p>Contact Us.</p>
         <ul>
-            <li><a> one thing</a></li>
-            <li><a> one thing</a></li>
-            <li><a> one thing</a></li>
-            <li><a> one thing</a></li>
-            <li><a> one thing</a></li>
-            <li><a> one thing</a></li>
-            <li><a> one thing</a></li>
-            <li><a> one thing</a></li>
+            <li><a href="#">Contact 1</a></li>
+            <li><a href="#">Contact 2</a></li>
         </ul>
     </footer>
 </body>
