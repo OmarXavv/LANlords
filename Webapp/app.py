@@ -31,7 +31,17 @@ def trash():
     current_time = datetime.now().strftime('%H:%M:%S') 
     return render_template('trash.html', time=current_time)
 
-
-
+@app.route('/post_data', methods=['POST'])
+def post_data():
+    global temperature, humidity, light_level
+    data = request.get_json() 
+    
+    if data:
+        temperature = data.get("temperature")
+        humidity = data.get("humidity")
+        
+        return "Data received", 200
+    else:
+        return "Invalid data", 400
 if __name__ == "__main__":
     app.run(debug=True)
