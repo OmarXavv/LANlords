@@ -7,6 +7,7 @@ from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length, ValidationError
 from flask_bcrypt import Bcrypt
 
+use_reloader=False
 app = Flask(__name__)
 bcrypt = Bcrypt(app)
 app.secret_key = "secret_key"
@@ -21,7 +22,6 @@ login_manager.login_view = 'login'
 
 temperature = "N/A"
 humidity = "N/A"
-light_level = "N/A"
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -99,10 +99,7 @@ def home():
 @login_required
 def dashboard():
     timenow = datetime.now().strftime("%I:%M:%S %p")
-    temperature = "24°C"
-    lights_active = "12/20"
-    energy_usage = "75 kWh"
-    return render_template('Dashboard.html', time=timenow, temperature=temperature, lights_active=lights_active, energy_usage=energy_usage)
+    return render_template('Dashboard.html', time=timenow, temperature=temperature, humidity=humidity)
 
 @app.route('/entertainment')
 @login_required

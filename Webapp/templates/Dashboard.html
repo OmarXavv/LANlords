@@ -18,7 +18,7 @@
                 <li><a href="{{ url_for('dashboard') }}" class="active">Dashboard</a></li>
                 <li><a href="{{ url_for('entertainment') }}">Entertainment</a></li>
                 <li><a href="{{ url_for('trash') }}">Garbage</a></li>
-                <li><a href="{{ url_for('logout') }}" class="go-back">Go back</a></li>                
+                <li><a href="{{ url_for('logout') }}" class="go-back">Logout</a></li>                
             </ul>
         </aside>
 
@@ -36,8 +36,8 @@
                     <p>{{ temperature }}</p>
                 </div>
                 <div class="stat-card">
-                    <h3>Lights Active</h3>
-                    <p>{{ lights_active }}</p>
+                    <h3>Humidity</h3>
+                    <p>{{ humidity }}</p>
                 </div>
                 <div class="stat-card">
                     <h3>Energy Usage</h3>

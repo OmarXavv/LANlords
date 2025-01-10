@@ -18,7 +18,7 @@
                 <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
                 <li><a href="{{ url_for('entertainment') }}">Entertainment</a></li>
                 <li><a href="{{ url_for('trash') }}" class="active">Garbage</a></li>
-                <li><a href="{{ url_for('logout') }}" class="go-back">Go back</a></li>
+                <li><a href="{{ url_for('logout') }}" class="go-back">Logout</a></li>
             </ul>
         </aside>
 
@@ -29,34 +29,20 @@
                 <h1 class="time"> {{time}} </h1>
                 
             </header>
-            <section class="stats-overview">
-                <div class="stat-card">
-                    <h3>House Temperature</h3>
-                    <p>24°C(needs to be live)</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Lights Active (live if possible)</h3>
-                    <p>12/20</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Energy Usage (also live)</h3>
-                    <p>75 kWh</p>
-                </div>
-            </section>
 
             <section class="charts">
                 <div class="chart">
-                    <h3>Daily Energy Consumption (saves the last 7 days)</h3>
-                    <p> Day 1: ### </p>
-                    <p> Day 2: ### </p>
-                    <p> Day 3: ### </p>
-                    <p> Day 4: ### </p>
-                    <p> Day 5: ### </p>
-                    <p> Day 6: ### </p>
-                    <p> Day 7: ### </p>
+                    <h3>Day Schedule for trash</h3>
+                    <p> Monday: Residual Waste</p>
+                    <p> Tuesday: Paper and Cardboard </p>
+                    <p> Wednesday: Organic Waste</p>
+                    <p> Thursday: Plastic, Metal and Drink Cartons.</p>
+                    <p> Friday: Glass</p>
+                    <p> Saturday: N/A</p>
+                    <p> Sunday: N/A</p>
                 </div>
                 <div class="chart">
-                    <h3>Another info</h3>
+                    <h3>Please everyone comply so we can keep the house clean.</h3>
                 </div>
             </section>
         </main>
