@@ -20,15 +20,14 @@ float get_humidity() {
     return DHT11.getHumidity();
 }
 
-void loop()
-{
+void loop() {
     float temperature = get_temperature();
     float humidity = get_humidity();
 
     // Print temperature, humidity, and brightness to Serial
     Serial.print(temperature);
-    Serial.print(",");
-    Serial.print(humidity);
+    Serial.print(",");  // Separator
+    Serial.println(humidity);  // Add newline after the humidity value
 
     delay(2000);
 }
