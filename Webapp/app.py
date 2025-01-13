@@ -77,20 +77,6 @@ def logout():
     logout_user()
     return redirect(url_for('home'))
 
-
-@ app.route('/register', methods=['GET', 'POST'])
-def register():
-    form = RegisterForm()
-
-    if form.validate_on_submit():
-        hashed_password = bcrypt.generate_password_hash(form.password.data)
-        new_user = User(username=form.username.data, password=hashed_password)
-        db.session.add(new_user)
-        db.session.commit()
-        return redirect(url_for('login'))
-
-    return render_template('register.html', form=form)
-
 @app.route('/')
 def home():
     return render_template('Home.html')
@@ -98,19 +84,19 @@ def home():
 @app.route('/dashboard')
 @login_required
 def dashboard():
-    timenow = datetime.now().strftime("%I:%M:%S %p")
+    timenow = datetime.now().strftime("%I:%M %p")
     return render_template('Dashboard.html', time=timenow, temperature=temperature, humidity=humidity)
 
 @app.route('/entertainment')
 @login_required
 def entertainment():
-    current_time = datetime.now().strftime('%H:%M:%S') 
+    current_time = datetime.now().strftime('%H:%M') 
     return render_template('entertainment.html', time=current_time)
 
 @app.route('/trash')
 @login_required
 def trash():
-    current_time = datetime.now().strftime('%H:%M:%S') 
+    current_time = datetime.now().strftime('%H:%M') 
     return render_template('trash.html', time=current_time)
 
 @app.route('/post_data', methods=['POST'])
