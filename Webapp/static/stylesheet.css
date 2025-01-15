@@ -35,7 +35,7 @@ button:hover {
 /* Top Navigation Bar */
 .top-nav {
     position: absolute; 
-    width: 100%;
+    width: 50%;
     padding: 10px 20px;
     z-index: 10; 
     display: flex;
@@ -89,6 +89,19 @@ button:hover {
     font-size: 1rem;
     border-radius: 5px;
     margin-top: 20px;
+    transition-duration: 400ms;
+}
+.Dashboard-button:hover {
+    background-color: #2f2c3e;
+    border: none;
+    padding: 13px 23px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-top: 20px;
+    transform: scale(2); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition-duration: 400ms;
 }
 
 /* Why Section */
@@ -150,4 +163,6 @@ footer {
     background: #333;
     color: white;
     padding: 20px 0;
+    text-decoration: none;
 }
+

@@ -117,3 +117,49 @@ body {
 .Side-img {
     height: 90%;
 }
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: auto ;
+        text-align: center;
+        padding: 10px;
+        position: static;
+        height: 145px;
+    }
+
+    .nav-links li {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .stats-overview, .charts {
+        flex-direction: column;
+    }
+
+    .stat-card, .chart {
+        width: 100%;
+        margin-left: 15px;
+        width: 300px
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .stat-card h3, .chart h3 {
+        font-size: 1rem;
+    }
+
+    .stat-card p {
+        font-size: 0.9rem;
+    }
+    .Side-img{
+
+        height: 250%;
+    }
+}

@@ -63,3 +63,50 @@ input[type="submit"]:hover {
     font-size: 0.9rem;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    form {
+        padding: 10px;
+    }
+
+    .back {
+        font-size: 1rem;
+        margin-top: -200px; 
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+        margin-left: 3px;
+        position: absolute;
+    }
+
+    form {
+        margin: 0 -120px 0;
+        position: absolute;
+        width: 300px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        padding: 20px; 
+        font-size: 0.9rem; 
+        width: 250px;
+    }
+
+    input[type="submit"] {
+        padding: 8px 10px; 
+        font-size: 0.9rem; 
+    }
+
+    .back {
+        font-size: 0.9rem;
+        margin-top: 350px;
+        margin-left: 1px;
+    }
+}
